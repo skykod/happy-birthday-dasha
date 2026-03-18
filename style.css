@@ -1,0 +1,136 @@
+body{
+    margin:0;
+    font-family:Impact, sans-serif;
+    text-align:center;
+}
+
+/* первый экран */
+
+.section1{
+    background:#9b1126;
+    color:white;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.title{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.dog{
+    width:260px;
+    margin:20px 0;
+}
+
+.hint{
+    margin-top:20px;
+    font-size:14px;
+}
+
+.arrow{
+    width:80px;
+    margin:10px 0 20px 0;
+}
+
+/* второй экран */
+
+.section2{
+    background: #ffffff;
+    padding:60px 20px;
+}
+
+.text{
+    max-width:600px;
+    margin:auto;
+    font-weight:bold;
+    color:#9b1126;
+}
+
+.bigtext{
+    margin-top:40px;
+    font-size:36px;
+    color:#9b1126;
+}
+
+
+
+.button{
+    margin-top:20px;
+    padding:15px 35px;
+    border-radius:40px;
+    font-size:20px;
+}
+
+.btn1{
+    background:white;
+    color:black;
+    animation:pulse 2s infinite;
+}
+
+.btn2{
+    background:#9b1126;
+    color:white;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.07);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+/* сердечки */
+
+.heart{
+    position: fixed;
+    top: -10vh;
+    font-size: 3.2rem;          /* можно даже 3–4rem */
+    pointer-events: none;
+    user-select: none;
+    z-index: 9999;
+    animation: float linear forwards;
+    will-change: transform, opacity;
+}
+
+@keyframes float{
+
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.7);
+        opacity: 0.9;
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg) scale(1.1);
+    }
+    100% {
+        transform: translateY(110vh) rotate(900deg) scale(0.6);
+        opacity: 0.1;           /* почти незаметно исчезают внизу */
+    }
+
+}
+
+
+.right{
+    display: flex;
+    justify-content: center; /* горизонталь */
+    align-items: center;     /* вертикаль */
+    height: 20px;
+    margin-bottom:20px;
+
+}
